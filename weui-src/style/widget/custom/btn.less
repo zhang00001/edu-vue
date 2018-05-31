@@ -1,0 +1,42 @@
+@import "../../base/fn.less";
+.link (@color) {
+    color: @color;
+    border: 1px solid @color;
+}
+
+.btn {
+    padding: 0.25rem 0.5rem;
+    display: inline-block;
+    font-size: .7rem;
+    &.btn-primary {
+        color: #fff;
+        background: @primary;
+        &.btn-link {
+            .link(@primary);
+        }
+    }
+    &.btn-warn {
+        color: #fff;
+        background: @warn;
+        &.btn-link {
+            .link(@primary);
+        }
+    }
+    &.btn-info {
+        color: #fff;
+        background: @info;
+    }
+    &.btn-round {
+        border-radius: 5px;
+    }
+    /*特殊椭圆按钮 挑战失败页面*/
+    &.btn-circle {
+        border-radius: 5px;
+    }
+    &.btn-block {
+        &.btn-round {
+            border-radius: 5px;
+        }
+        display: block;
+    }
+}
